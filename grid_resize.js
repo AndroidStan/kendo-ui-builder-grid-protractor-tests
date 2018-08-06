@@ -79,8 +79,6 @@ describe('Kendo UI Builder Grid Resizing', function() {
         browser.actions().doubleClick({x:0, y:0}).perform();
 
         productInfoHeader.getLocation().then(function (location) {
-            //it's either a protractor dragAndDrop or the grid issue
-            //which is causing the back and forth moves to always happen 1 pixel more than expected
             expect(location.width).toBe(274);
         });
 
